@@ -111,21 +111,6 @@ Raw Comment
 
 ---
 
-## 📂 Repository Structure
-
-```
-toxic-comment-classification/
-├── notebooks/
-│   └── Final_Code.ipynb        # End-to-end pipeline: preprocessing → training → evaluation
-├── images/
-│   ├── confusion_matrices.png
-│   ├── roc_curves.png
-│   └── architecture_diagram.png
-└── README.md
-```
-
----
-
 ## 🚀 Getting Started
 
 ```bash
