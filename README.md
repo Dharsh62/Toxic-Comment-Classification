@@ -121,7 +121,6 @@ toxic-comment-classification/
 │   ├── confusion_matrices.png
 │   ├── roc_curves.png
 │   └── architecture_diagram.png
-├── requirements.txt
 └── README.md
 ```
 
