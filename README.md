@@ -52,36 +52,36 @@ Raw Comment
     │
     ▼
 ┌─────────────────────┐
-│ 1. Text Preprocessing│   lowercase → strip URLs/mentions/hashtags → remove punctuation
-│                      │   → expand contractions → stopword removal (negations kept)
-│                      │   → WordNet lemmatization
+│ 1.Text Preprocessing│   lowercase → strip URLs/mentions/hashtags → remove punctuation
+│                     │   → expand contractions → stopword removal (negations kept)
+│                     │   → WordNet lemmatization
 └─────────────────────┘
     │
     ▼
 ┌─────────────────────┐
-│ 2. GloVe Embedding   │   100-dim pretrained vectors, fine-tuned during training
+│ 2. GloVe Embedding  │   100-dim pretrained vectors, fine-tuned during training
 └─────────────────────┘
     │
     ▼
 ┌─────────────────────┐
-│ 3. Memory-Augmented  │   Sequential gated memory cell (forget / input / output gates)
-│    Layer (LSTM-based)│   captures short- and long-range dependencies across the comment
+│ 3.Memory-Augmented  │   Sequential gated memory cell (forget / input / output gates)
+│   Layer (LSTM-based)│   captures short- and long-range dependencies across the comment
 └─────────────────────┘
     │
     ▼
 ┌─────────────────────┐
-│ 4. Attention Layer   │   Learns per-timestep importance weights and produces a single
-│                      │   context vector focused on the most decisive words
+│ 4.Attention Layer   │   Learns per-timestep importance weights and produces a single
+│                     │   context vector focused on the most decisive words
 └─────────────────────┘
     │
     ▼
 ┌─────────────────────┐
-│ 5. Conv1D Layer      │   Extracts local n-gram patterns from the attended representation
+│ 5. Conv1D Layer     │   Extracts local n-gram patterns from the attended representation
 └─────────────────────┘
     │
     ▼
 ┌─────────────────────┐
-│ 6. Dense + Sigmoid   │   Independent probability per label → multi-label classification
+│ 6. Dense + Sigmoid  │   Independent probability per label → multi-label classification
 └─────────────────────┘
 ```
 
